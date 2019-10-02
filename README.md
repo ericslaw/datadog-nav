@@ -43,14 +43,16 @@ A little extra logic on when to push the right-side out a little farther is requ
 Debugging via chrome console is nice, so I extended the base String object with a function that expands epoch sec/msec into a human readable string.
 This function is called when() and is chainable (it only logs to console; it does not modify the string).
 
-#### Streamlining
+#### Install
 Pasting chunks of javascript into a bookmarklet generator tool is fine, but what if you want a dozen of them?  It is very time consuming.
 So I wrapped the code in a script that strips comments, minifies, and url encodes the result wrapped in the bookmarklet structure,
 and even spits out html anchor links for each that can be drag-n-dropped into your bookmark toolbar in chrome.
+
+You can just click the following link and drag the HTML anchors into your bookmarks toolbar.
+
+http://htmlpreview.github.com/?https://github.com/ericslaw/datadog-nav/blob/master/bmgen.html
 
 ### Bugs
 I initially had some issues with move_pct and noticed I was not casting math results back to int, thus introducing decimals into timestamps.
 I also found I was using incorrect multipliers in zoom_pct that swapped timestamps (I was using -1 instead of 2)
 
-### Premade examples
-see http://htmlpreview.github.com/?https://github.com/ericslaw/datadog-nav/blob/master/bmgen.html
