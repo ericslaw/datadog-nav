@@ -53,4 +53,4 @@ I initially had some issues with move_pct and noticed I was not casting math res
 I also found I was using incorrect multipliers in zoom_pct that swapped timestamps (I was using -1 instead of 2)
 
 ### Premade examples
-see [bmgen.html]
+see http://htmlpreview.github.com/?https://github.com/ericslaw/datadog-nav/blob/master/bmgen.html
