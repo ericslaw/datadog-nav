@@ -8,8 +8,10 @@ my @data = <DATA>;
 print "<html><body>";
 
 foreach my $list ( (
-    ["</2",    "ddnav(move_pct,-0.5)"],
+    ["<.5",    "ddnav(move_pct,-0.5)"],
+    ["<.3",    "ddnav(move_pct,-0.3)"],
     ["<4h",    "ddnav(move_abs,-4*3600)"],
+    ["<2h",    "ddnav(move_abs,-2*3600)"],
     ["<h",     "ddnav(move_abs,-3600)"],
     ["z-",     "ddnav(zoom_pct,2)"],
     ["[h]",    "ddnav(snap_abs,3600)"],
@@ -20,10 +22,12 @@ foreach my $list ( (
     ["[2d]",   "ddnav(snap_abs,2*24*3600)"],
     ["[w]",    "ddnav(snap_abs,7*24*3600)"],
     ["[2w]",   "ddnav(snap_abs,2*7*24*3600)"],
-    ["z+",     "ddnav(zoom_pct,-0.5)"],
+    ["z+",     "ddnav(zoom_pct,2)"],
     ["h>",     "ddnav(move_abs,3600)"],
+    ["2h>",    "ddnav(move_abs,4*3600)"],
     ["4h>",    "ddnav(move_abs,4*3600)"],
-    ["/2>",    "ddnav(move_pct,0.5)"],
+    [".3>",    "ddnav(move_pct,0.3)"],
+    [".5>",    "ddnav(move_pct,0.5)"],
 ))
 {
     my ($key,$cmd)= @{$list};
