@@ -14,5 +14,8 @@ function drop_time(ev) {
         window.location.search = '?' + pageurl.toString();
     }
 }
-document.getElementById('board-app') .addEventListener('dragover',drop_time);
-document.getElementById('board-app') .addEventListener('drop',drop_time);
+"board-app,superbar".split(',').forEach(id=>
+    "dragover,drop".split(',').forEach(ev=>{
+        var o=document.getElementById(id);if(o)addEventListener(ev,drop_time)
+    })
+)
