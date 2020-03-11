@@ -72,7 +72,7 @@ function ddnav(callback,param){
 // ddnav(snap_abs,300)         // snap edges to :5
 // ddnav(snap_abs,600)         // snap edges to :10
 // ddnav(snap_abs,900)         // snap edges to :15
-ddnav(snap_abs,1800)        // snap edges to :30
+// ddnav(snap_abs,1800)        // snap edges to :30
 // ddnav(snap_abs,3600)        // snap edges to hour
 // ddnav(snap_abs,3*3600)      // snap edges to 3h
 // ddnav(snap_abs,4*3600)      // snap edges to 4h
