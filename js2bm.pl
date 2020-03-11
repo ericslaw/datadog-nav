@@ -20,5 +20,5 @@ my $js =
 print qq|<a href="| if $anchor;
 print qq|javascript:(function(){|;
 print $js ;
-print qq|})())|;
+print qq|})()|;
 print qq|">$anchor</a><br>| if $anchor;
