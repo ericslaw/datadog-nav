@@ -50,7 +50,12 @@ and even spits out html anchor links for each that can be drag-n-dropped into yo
 
 You can just click the following link and drag the HTML anchors into your bookmarks toolbar.
 
-http://htmlpreview.github.com/?https://github.com/ericslaw/datadog-nav/blob/master/bmgen.html
+http://htmlpreview.github.com/?https://github.com/ericslaw/datadog-nav/blob/master/dd-time-nav.html
+
+html was created with the one-liner:
+```
+sed -ne '/examples.of.use/,$p' dd-time-nav.js | sed '/examples/d;s/^\/\/ //;s/ *\/\///'|while read cmd label; do (cat dd-time-nav.js;echo "$cmd")|js2bm.pl $label;done > dd-time-nav.html
+```
 
 ### Bugs
 I initially had some issues with move_pct and noticed I was not casting math results back to int, thus introducing decimals into timestamps.
